@@ -13,8 +13,8 @@ const multer = require("multer");
 const uploadMidddleWare = multer({ dest: 'uploads/' });
 const fs = require("fs");
 const Post = require("./models/Post");
-// const path = require("path");
-const PORT =  4000
+const path = require("path");
+const PORT = 4000
 
 app.use(cors({
     credentials: true,
