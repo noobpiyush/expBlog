@@ -21,9 +21,9 @@ app.use(cors({
     origin: "*",
 }))
 app.use(express.json());
-// const _dirname = path.dirname("");
-// const buildpath = path.join(__dirname,"../client/dist");
-// app.use(express.static(buildpath))
+const _dirname = path.dirname("");
+const buildpath = path.join(_dirname,"../client/dist/");
+app.use(express.static(buildpath))
 app.use(cookieParser());
 app.use("/uploads",express.static(__dirname+ "/uploads"));
 
